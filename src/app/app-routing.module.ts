@@ -14,8 +14,9 @@ const routes: Routes = [
       { path: 'delete/:id', component: DeleteUserComponent },
       { path: 'edit/:id', component: EditUserComponent },
       { path: 'view/:id', component: ViewUserComponent },
+      { path: 'create', component: AddUserComponent}
     ]
-  }
+  },
 
 ];
 
