@@ -28,7 +28,7 @@
     </p>
 
     <p>
-        <button mat-stroked-button color="primary">Create User</button>
+        <button mat-stroked-button color="primary" [disabled]="!addUserForm.valid">Create User</button>
     </p>
     </form>
     </mat-card-content>
