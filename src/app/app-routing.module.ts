@@ -6,12 +6,16 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
 import { ListUsersComponent } from './users/list-users/list-users.component';
 import { ViewUserComponent } from './users/view-user/view-user.component';
 
-const routes: Routes = [
-  { path: 'create', component: AddUserComponent },
-  { path: 'view/:id', component: ViewUserComponent },
-  { path: 'list', component: ListUsersComponent },
-  { path: 'delete/:id', component: DeleteUserComponent },
-  { path: 'edit/:id', component: EditUserComponent }
+const routes: Routes = [  
+  { path: 'users',
+    children: [
+      { path: '', component: ListUsersComponent },
+      { path: 'list', component: ListUsersComponent},
+      { path: 'delete/:id', component: DeleteUserComponent },
+      { path: 'edit/:id', component: EditUserComponent },
+      { path: 'view/:id', component: ViewUserComponent },
+    ]
+  }
 
 ];
 

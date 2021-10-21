@@ -1,1 +1,6 @@
-<p>list-users works!</p>
+<h1 *ngIf="listUsers">Displaying {{listUsers.length }} users </h1>
+<mat-list role="list" *ngFor= "let user of listUsers">
+    <mat-list-item role="listitem">
+        {{ user.name }} , {{user.email}} | <a [routerLink]="['/users/view', user.id]">View</a> | <a [routerLink]="['/users/edit', user.id]">Edit</a> | <a [routerLink]="['/users/delete', user.id]">Delete</a>
+    </mat-list-item>
+</mat-list>

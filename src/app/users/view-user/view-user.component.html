@@ -1,1 +1,6 @@
-<p>view-user works!</p>
+<div *ngIf="userDetails">
+    {{userDetails.name}}
+    <p>
+        {{userDetails.email}}
+    </p>
+</div>
